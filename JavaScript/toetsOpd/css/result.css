@@ -1,0 +1,38 @@
+.analysis {
+   padding: 100px 0px;
+}
+.analysis__container {
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+   list-style: decimal;
+}
+.analysis__question {
+}
+.analysis__question__text {
+}
+.analysis__results {
+   display: flex;
+   align-items: center;
+   gap: 100px;
+}
+.analysis__results-text{
+   padding: 20px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 10px;
+}
+.analysis__question-antword {
+}
+.analysis__results-icon {
+}
+.analysis__results-icon img{
+   height: 50px;
+}
+.analysis-answer{
+   font-weight: 500;
+}
+.analysis__rating{
+   text-align: center;
+}

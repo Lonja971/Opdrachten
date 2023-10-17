@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+body {
+	position: relative;
+   font-family: "Roboto Slab";
+   color: #206f00;
+}
+._container {
+	max-width: 1290px;
+	margin: 0 auto;
+	padding: 0px 15px;
+	/*border: 1px solid rgb(68, 120, 231);*/
+}
+.wrapper {
+}
+h1{
+   font-size: 40px;
+   font-weight: 500;
+}
+h2{
+   font-size: 30px;
+   font-weight: 500;
+}
+
+/*-------------------HEADER---------------------*/
+
+.header {
+   position: relative;
+   padding: 100px 0px;
+}
+
+.header::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url('../img/header__photo.png') 0 30%/100% auto no-repeat;
+   filter: blur(3px);
+   z-index: -1;
+}
+@media (max-width:600px) {
+   .header {
+      position: relative;
+      padding: 50px 0px;
+   }
+}
+
+.header__container {
+}
+
+.header__text {
+   text-align: center;
+   color: #fff;
+   -webkit-text-stroke: 1px #206f00;
+}
+
+.header__maintext {
+}
+.header__secondtext {
+}

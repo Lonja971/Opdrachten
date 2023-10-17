@@ -1,0 +1,47 @@
+/*-------------------TEST---------------------*/
+
+.test {
+   padding: 50px 0px 0px 0px;
+}
+.test__container {
+}
+.test-form {
+}
+.form__question {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+.form__question:not(:last-child){
+   margin-bottom: 50px;
+}
+.form__question-text {
+}
+.form__question-input {
+   outline: 1px solid #206f00;
+   padding: 10px 20px;
+   width: 100%;
+   border-radius: 5px;
+   color: #206f00;
+}
+.form__question-input:focus{
+   outline: 2px solid #206f00;
+}
+
+.button__block {
+   text-align: center;
+}
+.button {
+   text-transform: uppercase;
+   padding: 10px 20px;
+   border-radius: 5px;
+   outline: 1px solid #000;
+   cursor: pointer;
+   font-size: 20px;
+   transition: all 0.3s ease 0s;
+   color: #206f00;
+   background-color: transparent;
+}
+.button:hover{
+   background-color: #caffb5;
+}
