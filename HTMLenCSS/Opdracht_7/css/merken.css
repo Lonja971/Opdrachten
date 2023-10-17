@@ -1,0 +1,24 @@
+/*---------------------SECTION-----------------------*/
+
+.section__container{
+   margin-top: 0px;
+}
+
+.section__box-merken {
+}
+.section-merken__img {
+   max-width: 300px;
+   padding: 0px 30px 10px 0px;
+}
+.section-merken__text {
+}
+.section-merken__maintext {
+   margin-bottom: 15px;
+}
+.section-merken__secondtext {
+}
+@media (max-width:600px) {
+   .section-merken__img {
+      max-width: 200px;
+   }
+}

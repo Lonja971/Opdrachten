@@ -1,0 +1,57 @@
+/*---------------------MAIN-----------------------*/
+
+.main{
+   height: 500px;
+   background: url('../img/backgrounds/main_background.jpg') 0 100%/100% auto no-repeat;
+}
+@media (max-width:1230px) {
+   .main{
+      background: url('../img/backgrounds/main_background.jpg') 100% 0/auto 100% no-repeat;
+   }
+}
+@media (max-width:1100px) {
+   .main{
+      background: url('../img/backgrounds/main_samll-background.jpg') 100% 0/auto 100% no-repeat;
+   }
+}
+.main__container {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.main__text {
+   line-height: 500%;
+   color: #fff;
+   max-width: 580px;
+}
+.main__maintext {
+}
+.main__secondtext {
+   text-align: right;
+}
+@media (max-width:1000px) {
+   .main__container {
+      justify-content: start;
+      margin-top: 50px;
+   }
+   .main__text {
+      text-align: center;
+      margin: 0 auto;
+   }
+   .main__secondtext {
+      text-align: center;
+   }
+}
+@media (max-width:630px) {
+   .main{
+      height: 650px;
+      background: url('../img/backgrounds/main_samll-background.jpg') 85% 0/auto 100% no-repeat;
+   }
+}
+
+/*---------------------SECTION-----------------------*/
+
+.section__container{
+   margin-top: 0px;
+}
