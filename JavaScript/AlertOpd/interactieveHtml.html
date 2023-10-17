@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Interactieve HTML</title>
+</head>
+   
+<body>
+   <h1>Oefenen met JavaScript</h1>
+   
+   Vul een getal tussen 0 en 10 in:
+   <br /><br />
+   <label for="getal">Getal:</label><br>
+   <input type="text" id="getal" name="getal"><br>
+   <br />
+   <input type="button" value="Controleer getal"
+   onclick="checkForm()" />
+   <br />
+   <div id="textDiv"></div>
+</body>
+<script>
+   var textDiv = document.getElementById("textDiv");
+   function checkForm(){
+      let getal = document.getElementById('getal').value;
+      if(getal < 0 || getal >=10){
+         textDiv.innerHTML = "Uw ingevoerde postcode is onjuist.";
+         alert('Het ingevulde getal is onjuist...');
+      }else{
+         textDiv.innerHTML = "Uw ingevoerde postcode is juist.";
+         alert('Het ingevulde getal is juist...');
+      }
+   }
+</script>
+</html>
