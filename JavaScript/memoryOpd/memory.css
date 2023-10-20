@@ -36,7 +36,19 @@ body {
 	max-width: 1290px;
 	margin: 0 auto;
 	padding: 0px 15px;
-	border: 1px solid rgb(68, 120, 231);
+}
+
+/*---------------------HEADER------------------------*/
+
+.header {
+}
+.header__container {
+   padding: 20px 15px;
+}
+.header__maintext {
+   font-size: 50px;
+   font-weight: 500;
+   text-align: center;
 }
 
 /*---------------------MEMORY-BLOCK------------------------*/
@@ -45,118 +57,82 @@ body {
 .memory__container{
    display: grid;
    grid-template-columns: auto auto auto auto;
-   border: 1px solid red;
    width: 600px;
    gap: 20px;
    padding: 15px;
+   justify-content: center;
+}
+.memory__help{
+   position: relative;
+   width: 130px;
+   height: 130px;
 }
 .memory__item{
-   width: 120px;
-   height: 120px;
-   pointer-events: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 130px;
+   height: 130px;
    display: flex;
    margin: 0 auto;
    background-color: #fff;
-}
-.memory__item:hover{
-   border: 1px solid #ff0000;
+   transition: all 0.4s ease 0s;
 }
 .memory__item img{
-   pointer-events: none;
    width: 100%;
    height: 100%;
    opacity: 0;
 }
-.open{
-   animation-name: animaOpenBlock;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinte;
-   animation-fill-mode: forwards;
+.open .memory__item{
+   background-color: transparent;
 }
-.open img{
-   animation-name: animaOpenItem;
-   animation-duration: 1.5s;
-	animation-iteration-count: infiite;
-   animation-fill-mode: forwards;
+.matched{
+   opacity: 0.5;
 }
-@keyframes animaOpenBlock {
-	0%{
-      background-color: #fff;
-   }
-   31%{
-      background-color: #fff;
-   }
-   32%{
-      background-color: transparent;
-   }
-   100%{
-      transform: perspective(600px) translate(0px, 0%) rotateX(180deg);
-      background-color: transparent;
-   }
-}
-@keyframes animaOpenItem {
-	0%{
-      opacity: 0;
-   }
-   31%{
-      opacity: 0;
-   }
-   32%{
-      opacity: 1;
-   }
-   45%{
-      transform: perspective(600px) translate(0px, 0%) rotateX(180deg);
-      opacity: 1;
-   }
-   100%{
-      transform: perspective(600px) translate(0px, 0%) rotateX(180deg);
-      opacity: 1;
-   }
+.plug{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   display: none;
 }
 
-.close{
-   animation-name: animaCloseBlock;
-	animation-duration: 1.5s;
-	animation-iteration-count: infinte;
-   animation-fill-mode: forwards;
+/*---------------------WIN-WINDOW------------------------*/
+
+.win-window{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+   z-index: 3;
+   background-color: #a3f1ffc2;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   transition: all 0.3s ease 0s;
+   opacity: 0;
+   pointer-events: none;
 }
-.close img{
-   animation-name: animaCloseItem;
-   animation-duration: 1.5s;
-	animation-iteration-count: infiite;
-   animation-fill-mode: forwards;
+.win-active{
+   opacity: 1;
+   pointer-events: all;
 }
-@keyframes animaCloseBlock {
-	0%{
-      transform: perspective(600px) translate(0px, 0%) rotateX(180deg);
-      background-color: transparent;
-   }
-   30%{
-      background-color: transparent;
-   }
-   31%{
-      background-color: #fff;
-   }
-   100%{
-      background-color: #fff;
-   }
+.win__maintext {
+   font-size: 70px;
+   font-weight: 500;
 }
-@keyframes animaCloseItem {
-	0%{
-      transform: perspective(600px) translate(0px, 0%) rotateX(180deg);
-      opacity: 1;
-   }
-   29%{
-      transform: perspective(600px) translate(0px, 0%) rotateX(180deg);
-      opacity: 1;
-   }
-   30%{
-      opacity: 1;
-   }
-   31%{
-      opacity: 0;
-   }
-   100%{
-      opacity: 0;
-   }
+.win__secondtext {
+   font-size: 30px;
+}
+.win__restart{
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   font-size: 30px;
+   color: #206f00;
 }

@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Memory Spel</title>
-	<meta charset="UTF-8">
+   <title>Memory Spel</title>
+   <meta charset="UTF-8">
    <link rel="stylesheet" type="text/css" href="memory.css">
    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 </head>
+
 <body>
+   <header class="header">
+      <div class="header__container _container">
+         <p class="header__maintext">Memory Game!</p>
+      </div>
+   </header>
    <div class="memory">
       <ul class="memory__container _container">
-         <li class="memory__item open">
-            <img src="img/1_card.jpg" alt="">
+         <li id="kaart1" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item close">
-            <img src="img/2_card.jpg" alt="">
+         <li id="kaart2" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/3_card.jpg" alt="">
+         <li id="kaart3" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/4_card.jpg" alt="">
+         <li id="kaart4" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/5_card.jpg" alt="">
+         <li id="kaart5" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/6_card.jpg" alt="">
+         <li id="kaart6" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/7_card.jpg" alt="">
+         <li id="kaart7" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/8_card.jpg" alt="">
+         <li id="kaart8" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/1_card.jpg" alt="">
+         <li id="kaart9" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/2_card.jpg" alt="">
+         <li id="kaart10" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/3_card.jpg" alt="">
+         <li id="kaart11" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/4_card.jpg" alt="">
+         <li id="kaart12" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/5_card.jpg" alt="">
+         <li id="kaart13" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/6_card.jpg" alt="">
+         <li id="kaart14" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/7_card.jpg" alt="">
+         <li id="kaart15" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
-         <li class="memory__item">
-            <img src="img/8_card.jpg" alt="">
+         <li id="kaart16" class="memory__help">
+            <div class="memory__item ">
+            </div>
          </li>
       </ul>
+   </div>
+   <div class="plug"></div>
+   <div class="win-window">
+      <a id="opnieuw" href="memory.html" class="win__restart">begin opnieuw</a>
+      <div class="win__maintext">Zege!</div>
+      <div class="win__secondtext">Je voltooit het spel in <span id="attempts"></span> stappen</div>
    </div>
 </body>
 <script src="memory.js"></script>
