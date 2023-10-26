@@ -83,8 +83,8 @@ function round(userMove){
    var randomIndex = Math.floor(Math.random() * allMoves.length);
    var botMove = allMoves[randomIndex];
 
-   document.getElementById("userMoveImg").src = `img/${userMove}.png`;
-   document.getElementById("botMoveImg").src = `img/${botMove}.png`;
+   document.getElementById("userMoveImg").src = `img/left/${userMove}.png`;
+   document.getElementById("botMoveImg").src = `img/right/${botMove}.png`;
    document.getElementById("userMoveImg").classList.add('openUser');
    document.getElementById("botMoveImg").classList.add('openBot');
 
