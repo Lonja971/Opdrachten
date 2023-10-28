@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactieve HTML</title>
+    <script>
+        function checkForm() {
+            var text = '';
+            for (var i = 1; i <= 2; i++) { 
+                var getal = document.getElementById('getal' + i).value;
+                if (getal < 0 || getal >= 10) {
+                    text = text + `Getal ` + i + ` is onjuist; `;
+                } else {
+                    text = text + `Getal ` + i + ` is juist; `;
+                }
+            }
+            alert(text);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Oefenen met JavaScript</h1>
+
+    Vul een getal tussen 0 en 10 in:
+    <br /><br />
+    <label for="getal1">Getal 1:</label><br>
+    <input type="text" id="getal1" name="getal"><br><br>
+    <label for="getal2">Getal 2:</label><br>
+    <input type="text" id="getal2" name="getal"><br>
+    <br />
+    <input type="button" value="Controleer getal" onclick="checkForm()" />
+</body>
+</html>
