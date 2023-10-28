@@ -9,15 +9,15 @@ var commentsBlock = document.getElementById('commentsBlock');
 
 var userScore = 0;
 var botScore = 0;
+var finishedRounds = 0;
 
 function scorSynch(value) {
    if (value == 0){
-      console.log(userScore, botScore);
       userScoreHTML.innerHTML = userScore;
       botScoreHTML.innerHTML = botScore;
    }else{
       setTimeout(function () {
-         console.log(userScore, botScore);
+         finishedRounds ++;
          userScoreHTML.innerHTML = userScore;
          botScoreHTML.innerHTML = botScore;
       }, 1500);
@@ -43,16 +43,19 @@ function endScore(scenario) {
          opacity: 1;
          pointer-events: all;
       `;
-   }, 3500);
+   }, 2500);
 };
 document.getElementById('endButton').addEventListener('click', function (e) {
    commentsBlock.innerHTML = `Kies hieronder uw zet`;
 
+   finishedRounds = 0;
    userScore = 0;
    botScore = 0;
 
    scorSynch(0);
    reset();
+   choiceBlock.classList.remove('choiceClosed');
+
    endPopup.style.cssText = `
       opacity: 0;
       pointer-events: none;
@@ -64,8 +67,14 @@ function comment(comentType){
    setTimeout(function () {
       if(comentType == 0){
          commentsBlock.innerHTML = `De bot heeft deze ronde gewonnen.`;
+         if (botScore >= 2){
+            commentsBlock.innerHTML = `De bot heeft gewonnen.`;
+         }
       }else if (comentType == 1){
-         commentsBlock.innerHTML = `Jij wint deze ronde. Om te winnen: ${3-userScore} punten`;
+         commentsBlock.innerHTML = `Jij wint deze ronde. Om te winnen: ${2-userScore} punt`;
+         if (userScore >= 2){
+            commentsBlock.innerHTML = `Je hebt dit spel gewonnen!`;
+         }
       }else{
          commentsBlock.innerHTML = 'Gelijkspelend.';
       }
@@ -152,15 +161,15 @@ function round(userMove){
       }
    }
 
-   if(userScore == 3){
+   if(userScore == 2){
       scenario = 'user';
       endScore(scenario);
-   }else if (botScore == 3){
+   }else if (botScore == 2){
       scenario = 'bot';
       endScore(scenario);
    }else{
       setTimeout(function () {
          reset();
-      }, 3500);
+      }, 2500);
    }
 };

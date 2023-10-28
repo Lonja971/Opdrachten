@@ -114,9 +114,6 @@ body {
 }
 .main__userblock {
 }
-.main__userblock img{
-   left: -100%;
-}
 .main__userblock-img{
    position: absolute;
    top: 0;
@@ -135,7 +132,7 @@ body {
 	}
    100%{
       opacity: 1;
-      left: 30%;
+      left: 45%;
    }
 }
 .openBot{
@@ -150,18 +147,13 @@ body {
 	}
    100%{
       opacity: 1;
-      right: 30%;
+      right: 45%;
    }
 }
 .main__block {
    position: relative;
    display: flex;
    align-items: center;
-}
-.main__botblock {
-}
-.main__botblock img{
-   right: -100%;
 }
 
 /*---------------------COMMENTS-----------------------*/
