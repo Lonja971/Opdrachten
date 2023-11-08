@@ -1,0 +1,8 @@
+ALTER TABLE student
+ADD woonplaats VARCHAR(30);
+
+ALTER TABLE student
+MODIFY Voorletters VARCHAR(5);
+
+ALTER TABLE student
+DROP COLUMN woonplaats;
